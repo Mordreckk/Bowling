@@ -1,0 +1,66 @@
+﻿<Window x:Class="Bowling.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Bowling"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="480" Width="800">
+    <Grid HorizontalAlignment="Center" Width="780">
+        <Label Content="Bowlorama" HorizontalAlignment="Center" Margin="0,10,0,0" VerticalAlignment="Top" Width="276" FontSize="50" />
+        <Image x:Name="Apu" Margin="103,9,518,335" Source="/pngaaa.com-366638.png" Stretch="Uniform"/>
+        <Image x:Name="simpsons" Margin="533,10,80,323" Source="/pin-pal-apu-the-simpsons-tapped-out-wiki-fandom-powered-572532(1).jpg" Stretch="Uniform"/>
+        <!--case player one-->
+        <Grid x:Name="PlayerOne" Background="red" Margin="0,123,582,92">
+            <TextBlock x:Name="player1Tb" HorizontalAlignment="Center" Margin="0,10,0,0" TextWrapping="Wrap" Text="Player One" VerticalAlignment="Top" Width="198" TextAlignment="Center"/>
+            <Grid x:Name="gridP1" Background="Beige" Margin="10,31,10,10">
+                <Label Content="Jeux :" HorizontalAlignment="Center" VerticalAlignment="Top" Width="178" HorizontalContentAlignment="Center" BorderBrush="Black" BorderThickness="1" Height="38"/>
+                <TextBlock x:Name="ScoreT1p1" HorizontalAlignment="Left" Margin="0,38,0,0"  Text="0" VerticalAlignment="Top" Height="130" Width="89" TextAlignment="Center" Padding="30" FontSize="50"/>
+                <TextBlock x:Name="ScoreT2p1" HorizontalAlignment="Left" Margin="89,38,0,0" Text="0" VerticalAlignment="Top" Height="130" Width="89" TextAlignment="Center" Padding="30" FontSize="50"/>
+            </Grid>
+        </Grid>
+        <!--case player Two-->
+        <Grid x:Name="PlayerTwo" Background="Green" Margin="203,123,379,92">
+            <TextBlock x:Name="playertwoTb" HorizontalAlignment="Center" Margin="0,10,0,0" TextWrapping="Wrap" Text="Player Two" VerticalAlignment="Top" Width="198" TextAlignment="Center"/>
+            <Grid  x:Name="gridP2" Background="Beige" Margin="10,31,10,10">
+                <Label Content="Jeux :" HorizontalAlignment="Center" VerticalAlignment="Top" Width="178" HorizontalContentAlignment="Center" BorderBrush="Black" BorderThickness="1" Height="38"/>
+                <TextBlock x:Name="ScoreT1p2" HorizontalAlignment="Left" Margin="0,38,0,0" TextWrapping="Wrap" Text="0" VerticalAlignment="Top" Height="130" Width="89" TextAlignment="Center" Padding="30" FontSize="50"/>
+                <TextBlock x:Name="ScoreT2p2" HorizontalAlignment="Left" Margin="89,38,0,0" TextWrapping="Wrap" Text="0" VerticalAlignment="Top" Height="130" Width="89" TextAlignment="Center" Padding="30" FontSize="50"/>
+            </Grid>
+            
+        </Grid>
+        <!--case player three-->
+        <Grid x:Name="PlayerThree" Background="Blue" Margin="406,123,176,92">
+            <TextBlock x:Name="playerthreeTb" HorizontalAlignment="Center" Margin="0,10,0,0" TextWrapping="Wrap" Text="Palyer Three" VerticalAlignment="Top" Width="198" TextAlignment="Center"/>
+            <Grid  x:Name="gridP3" Background="Beige" Margin="10,31,10,10">
+                <Label Content="Jeux :" HorizontalAlignment="Center" VerticalAlignment="Top" Width="178" HorizontalContentAlignment="Center" BorderBrush="Black" BorderThickness="1" Height="38"/>
+                <TextBlock x:Name="ScoreT1p3" HorizontalAlignment="Left" Margin="0,38,0,0" TextWrapping="Wrap" Text="0" VerticalAlignment="Top" Height="130" Width="89" TextAlignment="Center" Padding="30" FontSize="50"/>
+                <TextBlock x:Name="ScoreT2p3" HorizontalAlignment="Left" Margin="89,38,0,0" TextWrapping="Wrap" Text="0" VerticalAlignment="Top" Height="130" Width="89" TextAlignment="Center" Padding="30" FontSize="50"/>
+            </Grid>
+        </Grid>
+        <!--case player four-->
+        <Grid x:Name="PlayerFour" Background="Purple" Margin="609,123,0,92">
+            <TextBlock x:Name="playerfourTb" HorizontalAlignment="Center" Margin="0,10,0,0" TextWrapping="Wrap" Text="Player Four" VerticalAlignment="Top" Width="151" TextAlignment="Center"/>
+            <Grid  x:Name="gridP4" Background="Beige" Margin="10,31,10,10">
+                <Label Content="Jeux :" HorizontalAlignment="Center" VerticalAlignment="Top" Width="178" HorizontalContentAlignment="Center" BorderBrush="Black" BorderThickness="1" Height="38"/>
+                <TextBlock x:Name="ScoreT1p4" HorizontalAlignment="Left" Margin="0,38,0,0" TextWrapping="Wrap" Text="0" VerticalAlignment="Top" Height="130" Width="76" TextAlignment="Center" Padding="30" FontSize="50"/>
+                <TextBlock x:Name="ScoreT2p4" HorizontalAlignment="Left" Margin="76,38,0,0" TextWrapping="Wrap" Text="0" VerticalAlignment="Top" Height="130" Width="88" TextAlignment="Center" Padding="30" FontSize="50"/>
+            </Grid>
+        </Grid>
+        <Button HorizontalAlignment="Left" Margin="0,10,0,0" VerticalAlignment="Top" Height="89" Width="132" Click="PlayerAdd" >
+            <TextBox x:Name="AddName" TextWrapping="Wrap" Text="Name :" Width="120"/>
+        </Button>
+        <WrapPanel x:Name="wpBouton">
+            <Button x:Name="button_P1" Content="Player 1" HorizontalAlignment="Left" Margin="66,358,0,0" VerticalAlignment="Top" Width="76" Click="ButtonPlayerOne"/>
+            <Button x:Name="button_P2" Content="Player 2" HorizontalAlignment="Left" Margin="130,358,0,0" VerticalAlignment="Top" Width="76" Click="ButtonPlayerTwo"/>
+            <Button x:Name="button_P3" Content="Player 3" HorizontalAlignment="Left" Margin="120,358,0,0" VerticalAlignment="Top" Width="76" Click="ButtonPlayerThree"/>
+            <Button x:Name="button_P4" Content="Player 4" HorizontalAlignment="Left" Margin="120,353,0,0" VerticalAlignment="Top" Width="76" Click="ButtonPlayerFour"/>
+            <TextBlock  x:Name="ScoreFp1" FontSize="20" HorizontalAlignment="Left" Margin="10,32,0,0" TextWrapping="Wrap" Text="Score : " VerticalAlignment="Top" Width="188" Height="32" TextAlignment="Center"/>
+            <TextBlock x:Name="ScoreFp2" FontSize="20" HorizontalAlignment="Left" Margin="3,32,0,0" TextWrapping="Wrap" Text="Score : " VerticalAlignment="Top" Width="188" Height="32" TextAlignment="Center"/>
+            <TextBlock x:Name="ScoreFp3" FontSize="20" HorizontalAlignment="Left" Margin="6,32,0,0" TextWrapping="Wrap" Text="Score : " VerticalAlignment="Top" Width="188" Height="32" TextAlignment="Center"/>
+            <TextBlock x:Name="ScoreFp4" FontSize="20" HorizontalAlignment="Left" Margin="0,32,0,0" TextWrapping="Wrap" Text="Score : " VerticalAlignment="Top" Width="188" Height="32" TextAlignment="Center"/>
+        </WrapPanel>
+        <Button Content="End Turn" HorizontalAlignment="Left" Margin="665,25,0,0" VerticalAlignment="Top" Height="71" Width="105" Click="End_Turn"/>
+
+    </Grid>
+</Window>

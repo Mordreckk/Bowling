@@ -1,0 +1,26 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>WinExe</OutputType>
+    <TargetFramework>net6.0-windows</TargetFramework>
+    <Nullable>enable</Nullable>
+    <UseWPF>true</UseWPF>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <None Remove="Apu.png" />
+    <None Remove="pin-pal-apu-the-simpsons-tapped-out-wiki-fandom-powered-572532%281%29.jpg" />
+    <None Remove="pngaaa.com-366638.png" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Folder Include="img\" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Resource Include="Apu.png" />
+    <Resource Include="pin-pal-apu-the-simpsons-tapped-out-wiki-fandom-powered-572532(1).jpg" />
+    <Resource Include="pngaaa.com-366638.png" />
+  </ItemGroup>
+
+</Project>

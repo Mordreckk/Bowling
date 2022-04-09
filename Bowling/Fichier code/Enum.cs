@@ -1,0 +1,1 @@
+﻿enum Status { Neutre, Strike,DStrike,TStrike}
