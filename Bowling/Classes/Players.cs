@@ -1,7 +1,7 @@
 ﻿using System;
 
 namespace Bowling
-{
+{//classe de joueurs.
     internal class Players
     {
         public string NickName { get; set; }

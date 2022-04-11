@@ -61,6 +61,5 @@
             <TextBlock x:Name="ScoreFp4" FontSize="20" HorizontalAlignment="Left" Margin="0,32,0,0" TextWrapping="Wrap" Text="Score : " VerticalAlignment="Top" Width="188" Height="32" TextAlignment="Center"/>
         </WrapPanel>
         <Button Content="End Turn" HorizontalAlignment="Left" Margin="665,25,0,0" VerticalAlignment="Top" Height="71" Width="105" Click="End_Turn"/>
-
     </Grid>
 </Window>
