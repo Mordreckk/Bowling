@@ -33,7 +33,7 @@ namespace Bowling
             //}
                 if (score[0] == 0 && score[1] == 0)
                 {
-                    score[0] = 10;
+                    score[0] = new Random().Next(0,11) ;
                     ScoreList[Round, 0] = score[0];
                 }
                 else

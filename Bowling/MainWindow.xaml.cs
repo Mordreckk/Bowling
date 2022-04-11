@@ -91,7 +91,7 @@ namespace Bowling
             if (Game.Players[0].Balls >= 2)
             {
                 
-                EndTurn(0, 4);
+                StrikeManager.EndTurn(Game.Players[0],0,4,wpBouton);
                 
             }
                 
@@ -134,7 +134,8 @@ namespace Bowling
             Game.Players[1].Balls++;
             if (Game.Players[1].Balls >= 2)
             {
-                EndTurn(1, 5);
+                StrikeManager.EndTurn(Game.Players[1], 1, 5, wpBouton);
+                
             }
         }
         private void ButtonPlayerThree(object sender, RoutedEventArgs e)
@@ -174,7 +175,8 @@ namespace Bowling
             Game.Players[2].Balls++;
             if (Game.Players[2].Balls >= 2)
             {
-                EndTurn(2, 6);
+                StrikeManager.EndTurn(Game.Players[2], 2, 6, wpBouton);
+                
             }
         }
         private void ButtonPlayerFour(object sender, RoutedEventArgs e)
@@ -214,7 +216,8 @@ namespace Bowling
             Game.Players[3].Balls++;
             if (Game.Players[3].Balls >= 2)
             {
-                EndTurn(3, 7);
+                StrikeManager.EndTurn(Game.Players[3], 3, 7, wpBouton);
+              
             }
         }
         private void End_Turn(object sender, RoutedEventArgs e)

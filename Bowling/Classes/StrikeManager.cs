@@ -3,6 +3,8 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Windows;
+using System.Windows.Controls;
 
 namespace Bowling.Classes
 { // classe toolbox qui permet de gerer les strik et les spare
@@ -50,7 +52,33 @@ namespace Bowling.Classes
                 initPlayer.SpareP = true;
                 initPlayer.ScoreF += initPlayer.ScoreList[initPlayer.Round, 0] + initPlayer.ScoreList[initPlayer.Round, 1];
             }
+            
         }
-        
+        public static void EndTurn(Players initPlayer,int player, int intChildren,WrapPanel initWrap)
+        {
+            //fonction qui permet de finir et de validé le tour du joueur
+            int toto;
+            TextBlock tb = (TextBlock)initWrap.Children[intChildren];
+            int result = initPlayer.ScoreList[initPlayer.Round, 0] + initPlayer.ScoreList[initPlayer.Round, 1];
+            int.TryParse(tb.Text, out toto);
+            result += toto + initPlayer.ScoreF;
+            tb.Text = result.ToString();
+            MessageBox.Show("Score Final:" + result.ToString());
+            Button buttonPlayer = (Button)initWrap.Children[player];
+            buttonPlayer.IsEnabled = false;
+            Game.EndTurn++;
+            Turn10(player,initWrap,initPlayer);
+        }
+        public static void Turn10(int player, WrapPanel initWrap, Players initPlayer)
+        {
+            //fonction qui permet de check si turn 10 & appliqué la regle de jeux turn 10.
+            if (initPlayer.Round == 10 && (initPlayer.StrikeP == true || initPlayer.SpareP == true))
+            {
+                Button buttonPlayer = (Button)initWrap.Children[player];
+                buttonPlayer.IsEnabled = true;
+                initPlayer.RoundPlayer();
+                buttonPlayer.IsEnabled = false;
+            }
+        }
     }
 }
